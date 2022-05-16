@@ -1,0 +1,21 @@
+@import "normalize";
+@import "./settings/fonts";
+@import "./settings/colors";
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: $font-base;
+  color: $mustard;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
