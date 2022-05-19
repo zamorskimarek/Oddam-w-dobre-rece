@@ -1,0 +1,67 @@
+@import "./settings/colors";
+@import "./Hero.module";
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  .textCont {
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h2 {
+      font-size: 3.8rem;
+      font-weight: 300;
+      padding-bottom: 2.5rem;
+    }
+  }
+
+  .iconCont {
+    display: flex;
+    width: 100%;
+    height: 32.5rem;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: $cultured;
+    .icon {
+      display: flex;
+      flex-direction: column;
+      .iconText {
+        font-size: 1.8rem;
+        position: relative;
+        padding-bottom: 1.7rem;
+        &:after {
+          content : "";
+          position: absolute;
+          right: 25%;
+          bottom  : 25%;
+          height  : 1px;
+          width   : 50%;
+          border-bottom:1px solid $onyx;
+        }
+      }
+      p {
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  .buttonCont {
+    display: flex;
+    justify-content: center;
+    margin-top: 6.5rem;
+    button{
+      border: 0.75px solid $onyx;
+      width: 100%;
+      height: 12rem;
+      font-size: 3.6rem;
+      font-weight: 300;
+      background: none;
+      padding-inline: 3rem;
+    }
+  }
+}

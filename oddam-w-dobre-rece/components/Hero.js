@@ -22,9 +22,9 @@ export default function Hero() {
                 <div>
                     <Image src={require("../public/Decoration.svg")} width="253px" height="33px"></Image>
                 </div>
-                <div>
-                    <button>ODDAJ RZECZY</button>
-                    <button>ZORGANIZUJ ZBIÓRKĘ</button>
+                <div className={styles.heroButtonsCont}>
+                    <button className={styles.heroButton}>ODDAJ RZECZY</button>
+                    <button className={styles.heroButton}>ZORGANIZUJ ZBIÓRKĘ</button>
                 </div>
             </div>
         </div>
