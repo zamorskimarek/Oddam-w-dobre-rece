@@ -1,5 +1,4 @@
 import styles from "../styles/ThreeColumns.module.scss"
-import Image from "next/image";
 
 
 export default function ThreeColumns() {
@@ -22,7 +21,6 @@ export default function ThreeColumns() {
                         <h3>ZORGANIZOWANY ZBIÓREK</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisc Pellentesque vel enim a elit viverra elementuma. Aliquam erat volutpat.</p>
                     </div>
-
                 </div>
             </div>
         </>

@@ -1,18 +1,17 @@
 import React, {useRef, useState} from "react";
 import {Alert} from "react-bootstrap";
 import  { useAuth } from "../contexts/AuthContext";
-// import {Link } from "react-router-dom";
-import { useRouter } from "next/router";
+import {useRouter} from "next/router";
 import Link from "next/link";
 import Menu from "../components/Menu";
-import style from "../styles/Signup.module.scss";
+import style from "../styles/Signup.module.scss"
 import Image from "next/image";
-import MenuForLogins from "../components/MenuForLogins";
 
-export default function Login() {
+export default function Signup() {
     const emailRef = useRef()
     const passwordRef = useRef()
-    const { login }  = useAuth()
+    const passwordConfirmRef = useRef()
+    const { signup }  = useAuth()
     const [error, setError] = useState("")
     const [loading, setLoading] = useState(false)
     const router = useRouter()
@@ -20,14 +19,17 @@ export default function Login() {
     async function handleSubmit(e) {
         e.preventDefault()
 
+        if (passwordRef.current.value !== passwordConfirmRef.current.value) {
+            return setError("Passwords do not match")
+        }
+
         try {
             setError("")
             setLoading(true)
-            await login(emailRef.current.value, passwordRef.current.value)
-
+            await signup(emailRef.current.value, passwordRef.current.value)
             router.push("/")
         } catch {
-            setError("Failed to sign in")
+            setError("Failed to create an account")
         }
 
         setLoading(false)
@@ -35,10 +37,10 @@ export default function Login() {
 
     return (
         <>
-            <MenuForLogins></MenuForLogins>
+            <Menu></Menu>
             <div className={style.container}>
                 <div>
-                    <h2>Zaloguj się</h2>
+                    <h2>Załóż konto</h2>
                     <div>
                         <Image src={require("../public/Decoration.svg")} width="253px" height="33px"></Image>
                     </div>
@@ -52,13 +54,18 @@ export default function Login() {
                             <label>Hasło</label>
                             <input type="password" ref={passwordRef} required></input>
                         </div>
+                        <div id="password-confirm" className={style.inputCont}>
+                            <label>Powtórz hasło</label>
+                            <input type="password" ref={passwordConfirmRef} required></input>
+                        </div>
                         <div className={style.butonCont}>
-                            <button><Link href="/signup"><a>Załóż konto</a></Link></button>
-                            <button disabled={loading} className={style.active} type="submit">Zaloguj się</button>
+                            <button><Link href="/login"><a>Zaloguj się</a></Link></button>
+                            <button disabled={loading} className={style.active} type="submit">Załóż konto</button>
                         </div>
                     </form>
                 </div>
             </div>
         </>
+
     )
 }

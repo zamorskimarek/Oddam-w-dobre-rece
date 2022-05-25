@@ -13,9 +13,11 @@
   .navLink {
     font-size: 1.8rem;
     padding: 0.9rem 2rem;
+    text-decoration: none;
     &:hover {
       border: 1px solid $onyx;
     }
+
   }
 }
 
