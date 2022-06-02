@@ -6,6 +6,7 @@ import Link from "next/link";
 import Menu from "../components/Menu";
 import style from "../styles/Signup.module.scss"
 import Image from "next/image";
+import MenuForLogins from "../components/MenuForLogins";
 
 export default function Logout() {
     const { signup }  = useAuth()
@@ -17,7 +18,7 @@ export default function Logout() {
 
     return (
         <>
-            <Menu></Menu>
+            <MenuForLogins></MenuForLogins>
             <div className={style.container}>
                 <div>
                     <h2>Wylogowanie nastąpiło pamyślnie!</h2>

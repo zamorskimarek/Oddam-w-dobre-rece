@@ -1,8 +1,11 @@
 import Link from "next/link"
 import styles from "../styles/Hero.module.scss"
 import Image from "next/image";
+import {useRouter} from "next/router";
 
 export default function Hero() {
+    const router = useRouter()
+
     return (
         <div className={styles.heroContainer}>
             <div className={styles.heroImg}>
@@ -23,7 +26,7 @@ export default function Hero() {
                     <Image src={require("../public/Decoration.svg")} width="253px" height="33px"></Image>
                 </div>
                 <div className={styles.heroButtonsCont}>
-                    <button className={styles.heroButton}>ODDAJ RZECZY</button>
+                    <Link href="/oddaj-rzeczy"><button className={styles.heroButton}>ODDAJ RZECZY</button></Link>
                     <button className={styles.heroButton}>ZORGANIZUJ ZBIÓRKĘ</button>
                 </div>
             </div>

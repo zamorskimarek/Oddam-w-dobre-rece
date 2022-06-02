@@ -21,9 +21,11 @@ export default function MenuForLogins() {
         <div className={styles.menuContainer}>
             <div>
                 {currentUser ? (<>
-                    <p>czesc {currentUser.multiFactor.user.email}</p>
-                    <Button >oddaj rzeczy</Button>
-                    <Button onClick={handleLogout}>wyloguj</Button>
+                    <div className={styles.items}>
+                        <p>Cześć {currentUser.multiFactor.user.email}</p>
+                        <Link href="oddaj-rzeczy"><Button >Oddaj rzeczy</Button></Link>
+                        <Button onClick={handleLogout}>Wyloguj</Button>
+                    </div>
                 </>) : (<>
                     <Link href="/login"><a className={styles.loginLink}>Zaloguj</a></Link>
                     <Link href="/signup"><a className={styles.loginLink}>Zarejestruj</a></Link>

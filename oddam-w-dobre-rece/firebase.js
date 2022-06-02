@@ -12,7 +12,7 @@ const app = firebase.initializeApp({
     // appId: process.env.REACT_APP_FIREBASE_APP_ID
     apiKey: "AIzaSyAkn2E0IgUJqXjI92P5jPAVlfJZPH2EsQo",
     authDomain: "oddam-w-dobre-rece-a4f96.firebaseapp.com",
-    // databaseURL: "https://snkrfrkr-e6c5c-default-rtdb.europe-west1.firebasedatabase.app",
+    // databaseURL: "https://oddam-w-dobre-rece-a4f96-default-rtdb.europe-west1.firebasedatabase.app",
     projectId: "oddam-w-dobre-rece-a4f96",
     storageBucket: "oddam-w-dobre-rece-a4f96.appspot.com",
     messagingSenderId: "771716548331",

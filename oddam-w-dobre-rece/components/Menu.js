@@ -23,7 +23,7 @@ export default function Menu() {
             <div>
                 {currentUser ? (<>
                     <p>czesc {currentUser.multiFactor.user.email}</p>
-                    <Button >oddaj rzeczy</Button>
+                    <Link href="/oddaj-rzeczy"><Button >oddaj rzeczy</Button></Link>
                     <Button onClick={handleLogout}>wyloguj</Button>
                 </>) : (<>
                         <Link href="/login"><a className={styles.loginLink}>Zaloguj</a></Link>
