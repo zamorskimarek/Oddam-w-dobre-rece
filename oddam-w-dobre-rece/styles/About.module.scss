@@ -1,0 +1,39 @@
+@import "./settings/colors";
+
+.container {
+  height: 958px;
+  display: flex;
+  align-items: center;
+  margin-top: 4rem;
+
+  .textCont {
+    background-color: $cultured;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    h2 {
+      font-size: 3.8rem;
+      font-weight: 400;
+      padding-bottom: 3rem;
+    }
+    p {
+      width: 60%;
+      text-align: center;
+      line-height: 4rem;
+      font-size: 3rem;
+      font-weight: 400;
+      padding-top: 3rem;
+    }
+  }
+
+  .imgCont {
+    width: 50%;
+    height: 100%;
+    background-image: url("../public/assets/People.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}

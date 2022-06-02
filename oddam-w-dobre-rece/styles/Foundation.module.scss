@@ -1,0 +1,31 @@
+@import "./settings/colors";
+
+
+.red {
+  background: red;
+  margin-bottom: 1rem;
+}
+
+.buttonCont {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 6.5rem;
+  button{
+    width: 20%;
+    height: 8rem;
+    font-size: 2.4rem;
+    font-weight: 400;
+    background: none;
+    padding-inline: 2rem;
+    text-align: center;
+    border: none;
+    &:hover {
+      border: 0.75px solid $onyx;
+    }
+  }
+  .active {
+    border: 0.75px solid $onyx;
+  }
+
+}
